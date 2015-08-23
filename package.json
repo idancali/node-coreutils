@@ -1,0 +1,24 @@
+{
+  "name": "coreutils",
+  "version": "0.0.1",
+  "description": "coreutils",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dancali/node-coreutils.git"
+  },
+  "author": "Dan Calinescu <hi@dancali.io> (http://dancali.io)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dancali/node-coreutils/issues"
+  },
+  "homepage": "https://github.com/dancali/node-coreutils",
+  "dependencies": {
+    "colors": "^1.1.2",
+    "moment": "^2.10.6",
+    "util": "^0.10.3"
+  }
+}
