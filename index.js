@@ -15,15 +15,15 @@ var logger  = {
 
   // Second level logging
   ok: function (text) {
-    logger.log(chalk.green('   ✔') + chalk.dim(text));
+    logger.log(chalk.green('   ✔ ') + chalk.dim(text));
   },
 
   skip: function (text){
-    logger.log(chalk.cyan('   ★') + chalk.dim(text));
+    logger.log(chalk.cyan('   ★ ') + chalk.dim(text));
   },
 
   fail: function (text){
-    logger.log(chalk.red('   ✗') + chalk.dim(text));
+    logger.log(chalk.red('   ✗ ') + chalk.dim(text));
   },
 
   // First level logging
@@ -50,11 +50,9 @@ var logger  = {
     var line      = char.repeat(max);
 
     logger.log("");
-    // logger.log(chalk.bold(line));
     logger.log(chalk.bold(char.repeat(padding) + space.repeat(spacing) +
                 text.toUpperCase() +
                 space.repeat(spacing) + char.repeat(padding - buffer)));
-    // logger.log(chalk.bold(line));
     logger.log("");
   },
 
