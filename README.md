@@ -1,2 +1,1 @@
-# node-coreutils
-coreutils
+# Core Node Utils

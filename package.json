@@ -1,6 +1,6 @@
 {
   "name": "coreutils",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "coreutils",
   "main": "index.js",
   "scripts": {
@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/dancali/node-coreutils.git"
+    "url": "https://github.com/idancali/node-coreutils.git"
   },
-  "author": "Dan Calinescu <hi@dancali.io> (http://dancali.io)",
+  "author": "Dan Calinescu <idancalinescu@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/dancali/node-coreutils/issues"
+    "url": "https://github.com/idancali/node-coreutils/issues"
   },
-  "homepage": "https://github.com/dancali/node-coreutils",
+  "homepage": "https://github.com/idancali/node-coreutils",
   "dependencies": {
     "chalk": "^1.1.1",
     "colors": "^1.1.2",
