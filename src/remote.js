@@ -14,7 +14,7 @@ function remoteStream(url) {
 
 function downloadFromUrl(url, dest) {
     return new Promise((resolve, reject) => {
-        core.remoteStream(url).
+        remoteStream(url).
         pipe(zlib.createGunzip({
             fromBase: false
         })).pipe(tar.Extract({
