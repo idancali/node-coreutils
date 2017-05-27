@@ -17,7 +17,7 @@ function downloadFromUrl(url, dest) {
         remoteStream(url).
         pipe(zlib.createGunzip({
             fromBase: false
-        })).pipe(tar.Extract({
+        })).pipe(tar.extract({
             path: dest,
             strip: 1
         })).on('finish', () => {
