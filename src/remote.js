@@ -12,12 +12,8 @@ function remoteStream(url) {
   return got.stream(url)
 }
 
-function downloadFromUrl(url, dest) {
-    const x = tar.extract(dest, {
-        ignore: function(name) {
-            return path.extname(name) === '.bin'
-        }
-    })
+function downloadFromUrl(url, dest, options) {
+    const x = tar.extract(dest, options)
 
     return new Promise((resolve, reject) => {
         x.on('finish', function () {
