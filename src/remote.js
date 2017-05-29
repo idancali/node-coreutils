@@ -26,7 +26,7 @@ function downloadFromUrl(url, dest) {
         // on('finish', function () {
         //     resolve()
         // })                
-    })
+    // })
 }
 
 function checkIfUrlExists(url) {
