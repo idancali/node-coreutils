@@ -12,7 +12,6 @@ const run = {
             });
 
             proc.stderr.on('data', (data) => {
-                logger.fail(cmd + " failed: " + data)
             });
 
             proc.on('close', (code) => {
