@@ -23,7 +23,7 @@ const run = {
         run.async("npm", args)
     },
 
-    npmInstall: function (name, dir) {
+    npmInstallPackage: function (name, dir) {
         var args = ["install"]
 
         if (dir) {
@@ -33,6 +33,17 @@ const run = {
 
         args.push("--save")
         args.push(name)
+
+        run.npm(args)
+    },
+
+    npmInstall: function (dir) {
+        var args = ["install"]
+
+        if (dir) {
+            args.push("--prefix")
+            args.push(dir)
+        }
 
         run.npm(args)
     },
