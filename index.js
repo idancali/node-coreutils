@@ -3,5 +3,6 @@ const date = require('./src/date')
 const logger = require('./src/logger')
 const string = require('./src/string')
 const remote = require('./src/remote')
+const file = require('./src/file')
 
-module.exports = { data, date, logger, string, remote }
+module.exports = { data, date, logger, string, remote, file }
