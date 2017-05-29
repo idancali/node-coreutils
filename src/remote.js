@@ -22,8 +22,8 @@ function downloadFromUrl(url, dest, options) {
                     strip: 1,
                     C: dest
                 })).
-                on('error', reject(new Error('could not download'))).
-                on('end', () => resolve())
+                on('end', () => resolve()).
+                on('error', reject(new Error('could not download')))
     })
 }
 
