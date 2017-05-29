@@ -20,17 +20,6 @@ function downloadFromUrl(url, dest) {
                 C: dest,
                 strip: 1
           }))
-    // return new Promise((resolve, reject) => {
-    //     remoteStream(url).
-    //     pipe(zlib.createGunzip({
-    //         fromBase: false
-    //     })).pipe(tar.x({
-    //         C: dest,
-    //         strip: 1
-    //     })).on('finish', () => {
-    //         resolve()
-    //     })
-    // })
 }
 
 function checkIfUrlExists(url) {
