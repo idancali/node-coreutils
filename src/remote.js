@@ -1,5 +1,5 @@
 let got = require('got')
-let tar = require('tar')
+let tar = require('tar-fs')
 let zlib = require('zlib')
 
 const remote = {
@@ -13,13 +13,16 @@ function remoteStream(url) {
 }
 
 function downloadFromUrl(url, dest) {
-    return remoteStream(url).
-           pipe(zlib.createGunzip({
-                fromBase: false
-           })).pipe(tar.x({
-                C: dest,
-                strip: 1
-          }))
+    return new Promise((resolve, reject) => {
+        remoteStream(url).
+        pipe(zlib.createGunzip({
+            fromBase: false
+        })).
+        pipe(tar.extract(dest)).
+        on('finish', function () {
+            resolve()
+        })                
+    })
 }
 
 function checkIfUrlExists(url) {
