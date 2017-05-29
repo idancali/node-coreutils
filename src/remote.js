@@ -23,7 +23,7 @@ function downloadFromUrl(url, dest, options) {
                     C: dest
                 })).
                 on('error', reject(new Error('could not download'))).
-                on('end', resolve())
+                on('end', () => resolve())
     })
 }
 
