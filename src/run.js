@@ -15,11 +15,11 @@ const run = {
             });
 
             proc.on('close', (code) => {
-                logger.done("↳ Done with code:" + code);
+                logger.ok("↳ Done with code:" + code);
                 resolve()
             });
         })
-    }, 
+    },
 
     npm: function (args) {
         return run.async("npm", args)
