@@ -15,8 +15,13 @@ const run = {
             });
 
             proc.on('close', (code) => {
-                logger.ok("↳ Done with code:" + code);
+              if (code === 0) {
+                logger.done()
                 resolve()
+                return
+              }
+              
+              reject(new Error(`${cmd} failed`))
             });
         })
     },
