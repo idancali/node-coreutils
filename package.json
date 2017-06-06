@@ -1,6 +1,6 @@
 {
   "name": "coreutils",
-  "version": "0.2.9",
+  "version": "0.3.0",
   "description": "coreutils",
   "main": "index.js",
   "scripts": {
@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/idancali/node-coreutils",
   "dependencies": {
+    "base-64": "^0.1.0",
     "chalk": "^1.1.1",
     "colors": "^1.1.2",
     "fs-extra": "^3.0.1",
